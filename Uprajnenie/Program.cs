@@ -8,10 +8,10 @@ namespace Uprajnenie
     {
         static void Main(string[] args)
         { }
-           public string Title;
+        public string Title;
         public string Description;
         public DateTime DeadLine;
-           public bool Completed;
+        public bool Completed;
 
         public MyTask(string title, string description, DateTime deadline, bool Completed)
         {
@@ -23,9 +23,9 @@ namespace Uprajnenie
         }
         public void ShowTask(int number)
         {
-            Console.WriteLine("Задача номер"+ number);
+            Console.WriteLine("Задача номер" + number);
             Console.WriteLine("Заглавие" + Title);
-            Console.WriteLine("Краен срок" + DeadLine );
+            Console.WriteLine("Краен срок" + DeadLine);
 
             if (Completed)
                 Console.WriteLine("Задачата е изпълнена");
@@ -36,7 +36,7 @@ namespace Uprajnenie
 
         class Program
         {
-            static List<MyTask> tasks = new List <MyTask>();
+            static List<MyTask> tasks = new List<MyTask>();
 
 
             static void Main()
@@ -74,7 +74,8 @@ namespace Uprajnenie
                     }
                     else
                     {
-                        Console.WriteLine{"Невалидна опция"};
+                        Console.WriteLine{ "Невалидна опция"}
+                        ;
                     }
 
 
@@ -90,32 +91,32 @@ namespace Uprajnenie
                 string description = Console.ReadLine();
 
                 Console.Write("Въведи краен срок");
-                DateTime deadline= DateTime.Parse(Console.ReadLine());
+                DateTime deadline = DateTime.Parse(Console.ReadLine());
 
                 MyTask NewTask = new MyTask(title, description, deadline);
 
                 tasks.Add(NewTask);
                 Console.WriteLine("Задачата беше дошавена успешно");
 
-            static ShowAllTasks()
+                static ShowAllTasks()
 
-                    if(tasks.Count == 0)
+                    if (tasks.Count == 0)
                 {
                     Console.WriteLine("Няма въведени задачи");
                     return;
                 }
-                    for (int i = 0; i < tasks.Count; i++)
+                for (int i = 0; i < tasks.Count; i++)
                 {
                     tasks[i].ShowTask(i + 1);
 
                 }
 
-            
-        }
-        
+
+            }
 
 
-        
+
+
         }
     }
 
